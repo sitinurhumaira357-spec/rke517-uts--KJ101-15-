@@ -1,0 +1,16 @@
+/
+flowchart TD
+    A([Start]) --> B["Nurse / Doctor requests a medical record file by phone"]
+    B --> C["Filing clerk receives the request"]
+    C --> D["Search for the file using the medical record number"]
+    D --> E{"Does the file leave the hospital building?"}
+    E -->|Yes| F["Head of Medical Records Unit approves the loan"]
+    E -->|No| G["Record the loan in the paper loan book"]
+    F --> G
+    G --> H["Place a tracer card in the empty shelf slot"]
+    H --> I["Porter or nurse carries the file to the service unit"]
+    I --> J["File is used by the borrowing unit"]
+    J --> K["File is returned to the Medical Records Unit"]
+    K --> L["Filing clerk records the return date"]
+    L --> M["Filing clerk removes the tracer card"]
+    M --> N([End])
